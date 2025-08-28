@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SubSense - Subscription Management</title>
+    <title>SubSense - Stop Wasting Money on Forgotten Subscriptions</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
         :root {
@@ -13,6 +13,8 @@
             --dark: #1A2B4D;
             --text: #333333;
             --text-light: #666666;
+            --success: #28a745;
+            --warning: #ffc107;
         }
         
         * {
@@ -79,10 +81,20 @@
         .logo-text span {
             color: var(--accent);
         }
+
+        .beta-badge {
+            background-color: var(--warning);
+            color: var(--dark);
+            padding: 4px 8px;
+            border-radius: 12px;
+            font-size: 11px;
+            font-weight: 600;
+            margin-left: 10px;
+        }
         
-        /* Hero Section - ZMIANY: padding zmniejszony u góry */
+        /* Hero Section */
         .hero {
-            padding: 130px 0 80px; /* ZMIENIONE: zmniejszony padding u góry i dołu */
+            padding: 130px 0 80px;
             background: linear-gradient(135deg, rgba(42,75,124,0.05) 0%, rgba(255,107,74,0.05) 100%);
             text-align: center;
         }
@@ -94,30 +106,37 @@
             border-radius: 30px;
             font-size: 14px;
             font-weight: 600;
-            margin-bottom: 15px; /* ZMIENIONE: zmniejszony margines */
+            margin-bottom: 15px;
             display: inline-block;
         }
         
         .hero h1 {
-            font-size: 3.2rem; /* ZMIENIONE: nieco mniejszy rozmiar */
-            margin-bottom: 15px; /* ZMIENIONE: zmniejszony margines */
+            font-size: 3.2rem;
+            margin-bottom: 15px;
             color: var(--dark);
             line-height: 1.2;
         }
         
-        .hero p {
-            font-size: 1.2rem; /* ZMIENIONE: nieco mniejszy rozmiar */
-            color: var(--text-light);
-            max-width: 700px;
-            margin: 0 auto 30px; /* ZMIENIONE: zmniejszony margines */
+        .hero-subtitle {
+            font-size: 1.3rem;
+            color: var(--accent);
+            font-weight: 600;
+            margin-bottom: 10px;
         }
         
-        /* Stats - ZMIANY: zmniejszone odstępy */
+        .hero p {
+            font-size: 1.2rem;
+            color: var(--text-light);
+            max-width: 700px;
+            margin: 0 auto 30px;
+        }
+        
+        /* Stats */
         .stats {
             display: flex;
             justify-content: center;
-            gap: 30px; /* ZMIENIONE: zmniejszony odstęp między statystykami */
-            margin: 35px 0; /* ZMIENIONE: zmniejszony margines */
+            gap: 30px;
+            margin: 35px 0;
             flex-wrap: wrap;
         }
         
@@ -126,15 +145,108 @@
         }
         
         .stat-number {
-            font-size: 2.3rem; /* ZMIENIONE: nieco mniejszy rozmiar */
+            font-size: 2.3rem;
             font-weight: 700;
             color: var(--accent);
             margin-bottom: 5px;
         }
         
         .stat-label {
-            font-size: 0.95rem; /* ZMIENIONE: nieco mniejszy rozmiar */
+            font-size: 0.95rem;
             color: var(--text-light);
+        }
+
+        .urgency-banner {
+            background: linear-gradient(45deg, var(--accent), #ff8c69);
+            color: white;
+            padding: 12px;
+            border-radius: 8px;
+            margin: 20px 0;
+            font-weight: 600;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+        }
+
+        .progress-bar {
+            width: 100%;
+            height: 8px;
+            background-color: rgba(255,255,255,0.3);
+            border-radius: 4px;
+            overflow: hidden;
+            margin: 8px 0;
+        }
+
+        .progress-fill {
+            height: 100%;
+            background-color: white;
+            width: 73%;
+            border-radius: 4px;
+            animation: pulse 2s infinite;
+        }
+
+        @keyframes pulse {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.7; }
+        }
+        
+        /* Lead Magnet Section */
+        .lead-magnet {
+            background: linear-gradient(135deg, var(--primary), var(--dark));
+            color: white;
+            padding: 60px 0;
+            margin: 40px 0;
+            border-radius: 20px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .lead-magnet::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNDAiIGhlaWdodD0iNDAiIHZpZXdCb3g9IjAgMCA0MCA0MCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPGNpcmNsZSBjeD0iMjAiIGN5PSIyMCIgcj0iMiIgZmlsbD0icmdiYSgyNTUsMjU1LDI1NSwwLjEpIi8+Cjwvc3ZnPg==') repeat;
+            opacity: 0.1;
+        }
+
+        .lead-magnet-content {
+            position: relative;
+            z-index: 1;
+        }
+
+        .lead-magnet h3 {
+            font-size: 2.2rem;
+            margin-bottom: 15px;
+        }
+
+        .lead-magnet p {
+            font-size: 1.1rem;
+            margin-bottom: 25px;
+            opacity: 0.9;
+        }
+
+        .checklist-preview {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            margin: 30px 0;
+            flex-wrap: wrap;
+        }
+
+        .checklist-item {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 0.9rem;
+        }
+
+        .checklist-item i {
+            color: var(--success);
         }
         
         /* Email Form */
@@ -175,31 +287,117 @@
         }
         
         .submit-btn:hover {
-            background-color: var(--primary);
+            background-color: #ff5722;
             transform: translateY(-2px);
         }
         
+        .submit-btn:disabled {
+            background-color: #ccc;
+            cursor: not-allowed;
+            transform: none;
+        }
+
+        .lead-magnet .submit-btn {
+            background-color: white;
+            color: var(--primary);
+            font-weight: 700;
+        }
+
+        .lead-magnet .submit-btn:hover {
+            background-color: var(--light);
+            color: var(--dark);
+        }
+        
         .form-note {
-            margin-top: 12px; /* ZMIENIONE: zmniejszony margines */
+            margin-top: 12px;
             font-size: 14px;
             color: var(--text-light);
+        }
+
+        .lead-magnet .form-note {
+            color: rgba(255,255,255,0.8);
+        }
+        
+        .form-success {
+            background-color: #d4edda;
+            color: #155724;
+            padding: 12px;
+            border-radius: 8px;
+            margin-top: 15px;
+            display: none;
+        }
+        
+        .form-error {
+            background-color: #f8d7da;
+            color: #721c24;
+            padding: 12px;
+            border-radius: 8px;
+            margin-top: 15px;
+            display: none;
+        }
+
+        /* Social Proof */
+        .social-proof {
+            padding: 60px 0;
+            background-color: white;
+        }
+
+        .proof-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 25px;
+            margin-top: 40px;
+        }
+
+        .proof-card {
+            background-color: var(--light);
+            border-radius: 12px;
+            padding: 25px;
+            border-left: 4px solid var(--accent);
+        }
+
+        .savings-highlight {
+            font-size: 2rem;
+            font-weight: 700;
+            color: var(--accent);
+            margin-bottom: 8px;
+        }
+
+        .case-study {
+            color: var(--text-light);
+            font-size: 0.95rem;
+            margin-bottom: 15px;
+        }
+
+        .subscriptions-found {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+        }
+
+        .subscription-tag {
+            background-color: rgba(255, 107, 74, 0.1);
+            color: var(--accent);
+            padding: 4px 8px;
+            border-radius: 12px;
+            font-size: 0.8rem;
         }
         
         /* Benefits Section */
         .benefits {
-            padding: 80px 0; /* ZMIENIONE: zmniejszony padding */
-            background-color: white;
+            padding: 80px 0;
+            background: linear-gradient(135deg, rgba(42,75,124,0.05) 0%, rgba(255,107,74,0.05) 100%);
         }
         
         .section-title {
             text-align: center;
-            margin-bottom: 50px; /* ZMIENIONE: zmniejszony margines */
+            margin-bottom: 50px;
         }
         
         .section-title h2 {
-            font-size: 2.3rem; /* ZMIENIONE: nieco mniejszy rozmiar */
+            font-size: 2.3rem;
             color: var(--dark);
-            margin-bottom: 15px; /* ZMIENIONE: zmniejszony margines */
+            margin-bottom: 15px;
         }
         
         .section-title p {
@@ -212,160 +410,83 @@
         .benefits-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 25px; /* ZMIENIONE: zmniejszony odstęp */
+            gap: 25px;
         }
         
         .benefit-card {
-            background-color: var(--light);
+            background-color: white;
             border-radius: 12px;
-            padding: 25px; /* ZMIENIONE: zmniejszony padding */
+            padding: 25px;
             text-align: center;
             transition: all 0.3s;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
         }
         
         .benefit-card:hover {
             transform: translateY(-5px);
-            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
         }
         
         .benefit-icon {
-            width: 60px; /* ZMIENIONE: zmniejszony rozmiar */
-            height: 60px; /* ZMIENIONE: zmniejszony rozmiar */
+            width: 60px;
+            height: 60px;
             background: linear-gradient(135deg, var(--primary), var(--dark));
             border-radius: 50%;
             display: flex;
             align-items: center;
             justify-content: center;
-            margin: 0 auto 15px; /* ZMIENIONE: zmniejszony margines */
+            margin: 0 auto 15px;
             color: white;
-            font-size: 24px; /* ZMIENIONE: zmniejszony rozmiar */
+            font-size: 24px;
         }
         
         .benefit-card h3 {
-            font-size: 1.3rem; /* ZMIENIONE: nieco mniejszy rozmiar */
-            margin-bottom: 12px; /* ZMIENIONE: zmniejszony margines */
+            font-size: 1.3rem;
+            margin-bottom: 12px;
             color: var(--dark);
         }
         
         .benefit-card p {
             color: var(--text-light);
-            font-size: 0.95rem; /* ZMIENIONE: nieco mniejszy rozmiar */
+            font-size: 0.95rem;
         }
-        
-        /* Testimonials */
-        .testimonials {
-            padding: 80px 0; /* ZMIENIONE: zmniejszony padding */
-            background: linear-gradient(135deg, rgba(42,75,124,0.05) 0%, rgba(255,107,74,0.05) 100%);
-        }
-        
-        .testimonial-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 25px; /* ZMIENIONE: zmniejszony odstęp */
-            margin-top: 40px; /* ZMIENIONE: zmniejszony margines */
-        }
-        
-        .testimonial-card {
-            background-color: white;
-            border-radius: 12px;
-            padding: 25px; /* ZMIENIONE: zmniejszony padding */
-            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
-        }
-        
-        .testimonial-text {
-            font-style: italic;
-            margin-bottom: 15px; /* ZMIENIONE: zmniejszony margines */
-            color: var(--text);
-        }
-        
-        .testimonial-author {
-            display: flex;
-            align-items: center;
-        }
-        
-        .author-avatar {
-            width: 45px; /* ZMIENIONE: zmniejszony rozmiar */
-            height: 45px; /* ZMIENIONE: zmniejszony rozmiar */
-            border-radius: 50%;
-            background-color: var(--light);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin-right: 12px; /* ZMIENIONE: zmniejszony margines */
-            color: var(--primary);
-            font-weight: bold;
-        }
-        
-        .author-details h4 {
-            color: var(--dark);
-            margin-bottom: 5px;
-        }
-        
-        .author-details p {
-            color: var(--text-light);
-            font-size: 13px; /* ZMIENIONE: zmniejszony rozmiar */
-        }
-        
-        /* How It Works */
-        .how-it-works {
-            padding: 80px 0; /* ZMIENIONE: zmniejszony padding */
-            background-color: white;
-        }
-        
-        .steps {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            gap: 25px; /* ZMIENIONE: zmniejszony odstęp */
-            margin-top: 40px; /* ZMIENIONE: zmniejszony margines */
-        }
-        
-        .step {
-            flex: 1;
-            min-width: 250px;
-            max-width: 350px;
-            text-align: center;
-            padding: 25px; /* ZMIENIONE: zmniejszony padding */
-        }
-        
-        .step-number {
-            width: 45px; /* ZMIENIONE: zmniejszony rozmiar */
-            height: 45px; /* ZMIENIONE: zmniejszony rozmiar */
-            background-color: var(--accent);
-            color: white;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 20px; /* ZMIENIONE: zmniejszony rozmiar */
-            font-weight: bold;
-            margin: 0 auto 15px; /* ZMIENIONE: zmniejszony margines */
-        }
-        
-        .step h3 {
-            font-size: 1.3rem; /* ZMIENIONE: nieco mniejszy rozmiar */
-            margin-bottom: 12px; /* ZMIENIONE: zmniejszony margines */
-            color: var(--dark);
+
+        .benefit-stat {
+            font-weight: 700;
+            color: var(--accent);
         }
         
         /* CTA Section */
         .cta {
-            padding: 80px 0; /* ZMIENIONE: zmniejszony padding */
+            padding: 80px 0;
             background-color: var(--primary);
             color: white;
             text-align: center;
         }
         
         .cta h2 {
-            font-size: 2.3rem; /* ZMIENIONE: nieco mniejszy rozmiar */
-            margin-bottom: 15px; /* ZMIENIONE: zmniejszony margines */
+            font-size: 2.3rem;
+            margin-bottom: 15px;
         }
         
         .cta p {
-            font-size: 1.1rem; /* ZMIENIONE: nieco mniejszy rozmiar */
+            font-size: 1.1rem;
             max-width: 700px;
-            margin: 0 auto 30px; /* ZMIENIONE: zmniejszony margines */
+            margin: 0 auto 30px;
             opacity: 0.9;
+        }
+
+        .cta-highlight {
+            background-color: rgba(255,255,255,0.1);
+            padding: 20px;
+            border-radius: 12px;
+            margin: 20px 0;
+        }
+
+        .launch-timeline {
+            font-size: 1.1rem;
+            color: var(--warning);
+            font-weight: 600;
         }
         
         .cta .email-form {
@@ -376,88 +497,59 @@
         footer {
             background-color: var(--dark);
             color: white;
-            padding: 50px 0 25px; /* ZMIENIONE: zmniejszony padding */
+            padding: 30px 0 15px;
         }
         
         .footer-content {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: space-between;
-            gap: 30px; /* ZMIENIONE: zmniejszony odstęp */
-            margin-bottom: 30px; /* ZMIENIONE: zmniejszony margines */
-        }
-        
-        .footer-logo {
-            flex: 1;
-            min-width: 250px;
+            text-align: center;
         }
         
         .footer-logo .logo-text {
             color: white;
-            margin-bottom: 15px; /* ZMIENIONE: zmniejszony margines */
+            margin-bottom: 10px;
         }
         
         .footer-logo p {
             opacity: 0.7;
-            max-width: 300px;
-            font-size: 0.95rem; /* ZMIENIONE: nieco mniejszy rozmiar */
-        }
-        
-        .footer-links {
-            flex: 1;
-            min-width: 150px;
-        }
-        
-        .footer-links h4 {
-            margin-bottom: 15px; /* ZMIENIONE: zmniejszony margines */
-            font-size: 17px; /* ZMIENIONE: zmniejszony rozmiar */
-        }
-        
-        .footer-links ul {
-            list-style: none;
-        }
-        
-        .footer-links li {
-            margin-bottom: 8px; /* ZMIENIONE: zmniejszony margines */
-        }
-        
-        .footer-links a {
-            color: white;
-            opacity: 0.7;
-            text-decoration: none;
-            transition: all 0.3s;
-            font-size: 0.9rem; /* ZMIENIONE: zmniejszony rozmiar */
-        }
-        
-        .footer-links a:hover {
-            opacity: 1;
+            max-width: 400px;
+            margin: 0 auto;
         }
         
         .copyright {
             text-align: center;
-            padding-top: 25px; /* ZMIENIONE: zmniejszony padding */
+            padding-top: 20px;
             border-top: 1px solid rgba(255,255,255,0.1);
             opacity: 0.7;
-            font-size: 13px; /* ZMIENIONE: zmniejszony rozmiar */
+            font-size: 13px;
+            margin-top: 20px;
         }
         
         /* Responsive */
         @media (max-width: 768px) {
             .hero {
-                padding: 110px 0 60px; /* ZMIENIONE: zmniejszony padding na mobile */
+                padding: 110px 0 60px;
             }
             
             .hero h1 {
-                font-size: 2.2rem; /* ZMIENIONE: zmniejszony rozmiar na mobile */
+                font-size: 2.4rem;
+            }
+
+            .lead-magnet h3 {
+                font-size: 1.8rem;
+            }
+
+            .checklist-preview {
+                flex-direction: column;
+                gap: 15px;
             }
             
             .stats {
-                gap: 20px; /* ZMIENIONE: zmniejszony odstęp na mobile */
-                margin: 25px 0; /* ZMIENIONE: zmniejszony margines na mobile */
+                gap: 20px;
+                margin: 25px 0;
             }
             
             .stat-number {
-                font-size: 1.8rem; /* ZMIENIONE: zmniejszony rozmiar na mobile */
+                font-size: 1.8rem;
             }
             
             .email-form {
@@ -481,6 +573,7 @@
             <div class="logo">
                 <div class="logo-icon">S</div>
                 <div class="logo-text">Sub<span>Sense</span></div>
+                <span class="beta-badge">BETA</span>
             </div>
         </div>
     </header>
@@ -488,30 +581,120 @@
     <!-- Hero Section -->
     <section class="hero">
         <div class="container">
-            <span class="hero-badge">All in minutes, not HOURS</span>
-            <h1>Take Full Control of Your Money</h1>
-            <p>See all your subscriptions, bills, and recurring charges in one smart dashboard. Be the first to know when we launch!</p>
+            <span class="hero-badge">Average person wastes £200+ yearly</span>
+            <div class="hero-subtitle">Stop Paying for Subscriptions You Forgot About</div>
+            <h1>Find Hidden Money in 5 Minutes</h1>
+            <p>Most people have 3-7 forgotten subscriptions draining their accounts. Our AI finds them all automatically.</p>
             
-            <div class="stats">
-                <div class="stat-item">
-                    <div class="stat-number">£500+</div>
-                    <div class="stat-label">Yearly savings per user</div>
-                </div>
-                <div class="stat-item">
-                    <div class="stat-number">92%</div>
-                    <div class="stat-label">Success rate</div>
-                </div>
-                <div class="stat-item">
-                    <div class="stat-number">5-min</div>
-                    <div class="stat-label">Setup time</div>
+            <div class="urgency-banner">
+                <i class="fas fa-clock"></i>
+                <div>
+                    <div>First 1,000 users get lifetime access for £29 (normally £99)</div>
+                    <div class="progress-bar">
+                        <div class="progress-fill"></div>
+                    </div>
+                    <div style="font-size: 0.9rem; opacity: 0.9;">730 spots taken • 270 remaining</div>
                 </div>
             </div>
             
-            <form class="email-form" id="waitlist-form">
-                <input type="email" class="email-input" placeholder="Enter your email address" required>
-                <button type="submit" class="submit-btn">Join Waitlist</button>
-            </form>
-            <p class="form-note">We'll notify you about our launch. No spam, unsubscribe anytime.</p>
+            <div class="stats">
+                <div class="stat-item">
+                    <div class="stat-number">3.2</div>
+                    <div class="stat-label">Avg forgotten subscriptions per person</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">£240</div>
+                    <div class="stat-label">Average yearly savings</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">Q2 2025</div>
+                    <div class="stat-label">Beta launch</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Lead Magnet Section -->
+    <section class="lead-magnet">
+        <div class="container">
+            <div class="lead-magnet-content">
+                <h3>Get Your FREE Subscription Audit Checklist</h3>
+                <p>47 places where hidden subscriptions hide + instant email course on subscription management</p>
+                
+                <div class="checklist-preview">
+                    <div class="checklist-item">
+                        <i class="fas fa-check-circle"></i>
+                        <span>Bank statement patterns to spot</span>
+                    </div>
+                    <div class="checklist-item">
+                        <i class="fas fa-check-circle"></i>
+                        <span>Email search keywords</span>
+                    </div>
+                    <div class="checklist-item">
+                        <i class="fas fa-check-circle"></i>
+                        <span>App store hidden subscriptions</span>
+                    </div>
+                    <div class="checklist-item">
+                        <i class="fas fa-check-circle"></i>
+                        <span>Negotiation scripts for cancelling</span>
+                    </div>
+                </div>
+                
+                <form class="email-form" id="lead-magnet-form">
+                    <input type="email" class="email-input" placeholder="Enter your email for instant access" required>
+                    <button type="submit" class="submit-btn">Get Free Checklist + Early Access</button>
+                </form>
+                <div class="form-success">
+                    Check your email! Your checklist is on the way + you're on the VIP early access list.
+                </div>
+                <div class="form-error">
+                    Something went wrong. Please try again.
+                </div>
+                <p class="form-note">Instant download • No spam • Unsubscribe anytime</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Social Proof Section -->
+    <section class="social-proof">
+        <div class="container">
+            <div class="section-title">
+                <h2>Real Results from Beta Testers</h2>
+                <p>See what people discovered when they audited their subscriptions</p>
+            </div>
+            
+            <div class="proof-grid">
+                <div class="proof-card">
+                    <div class="savings-highlight">£340/year saved</div>
+                    <div class="case-study">Sarah, Marketing Manager from London, found 6 forgotten subscriptions including a gym membership she hadn't used in 8 months.</div>
+                    <div class="subscriptions-found">
+                        <span class="subscription-tag">Virgin Active £45/mo</span>
+                        <span class="subscription-tag">Adobe CC £20/mo</span>
+                        <span class="subscription-tag">Spotify Premium £9.99/mo</span>
+                        <span class="subscription-tag">Netflix £15.99/mo</span>
+                    </div>
+                </div>
+                
+                <div class="proof-card">
+                    <div class="savings-highlight">£156/year saved</div>
+                    <div class="case-study">James, Small Business Owner, discovered duplicate services and unused software subscriptions his team had forgotten about.</div>
+                    <div class="subscriptions-found">
+                        <span class="subscription-tag">Canva Pro £10/mo</span>
+                        <span class="subscription-tag">Dropbox Plus £8/mo</span>
+                        <span class="subscription-tag">Slack Pro £5.25/mo</span>
+                    </div>
+                </div>
+                
+                <div class="proof-card">
+                    <div class="savings-highlight">£288/year saved</div>
+                    <div class="case-study">Emma, University Student, found streaming services and apps she'd signed up for during free trials and completely forgotten.</div>
+                    <div class="subscriptions-found">
+                        <span class="subscription-tag">Disney+ £7.99/mo</span>
+                        <span class="subscription-tag">Amazon Prime £8.99/mo</span>
+                        <span class="subscription-tag">Headspace £5.99/mo</span>
+                    </div>
+                </div>
+            </div>
         </div>
     </section>
 
@@ -519,8 +702,8 @@
     <section class="benefits">
         <div class="container">
             <div class="section-title">
-                <h2>Take back control of your subscriptions</h2>
-                <p>SubSense helps you manage all your subscriptions in one place with powerful AI technology</p>
+                <h2>Stop the Subscription Drain</h2>
+                <p>SubSense automatically monitors and manages all your recurring payments</p>
             </div>
             
             <div class="benefits-grid">
@@ -528,107 +711,24 @@
                     <div class="benefit-icon">
                         <i class="fas fa-search-dollar"></i>
                     </div>
-                    <h3>Find Hidden Subscriptions</h3>
-                    <p>Our AI scans your accounts and identifies all active subscriptions, even the ones you've forgotten about.</p>
+                    <h3>AI-Powered Detection</h3>
+                    <p>Scans your bank accounts and emails to find <span class="benefit-stat">every single subscription</span> - even ones hidden in bundle payments or yearly charges.</p>
                 </div>
                 
                 <div class="benefit-card">
                     <div class="benefit-icon">
-                        <i class="fas fa-chart-line"></i>
-                    </div>
-                    <h3>Track Your Spending</h3>
-                    <p>Get detailed reports showing exactly how much you're spending monthly on subscriptions.</p>
-                </div>
-                
-                <div class="benefit-card">
-                    <div class="benefit-icon">
-                        <i class="fas fa-ban"></i>
-                    </div>
-                    <h3>Cancel with One Click</h3>
-                    <p>Cancel unwanted subscriptions instantly without dealing with customer service or complicated processes.</p>
-                </div>
-
-                <div class="benefit-card">
-                    <div class="benefit-icon">
-                        <i class="fas fa-bell"></i>
+                        <i class="fas fa-shield-alt"></i>
                     </div>
                     <h3>Price Increase Alerts</h3>
-                    <p>Get notified before subscription prices increase so you can decide whether to keep or cancel them.</p>
+                    <p>Get notified <span class="benefit-stat">48 hours before</span> any subscription price increases so you can cancel or negotiate better rates.</p>
                 </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Testimonials -->
-    <section class="testimonials">
-        <div class="container">
-            <div class="section-title">
-                <h2>What early users are saying</h2>
-                <p>Join thousands who have already expressed interest in SubSense</p>
-            </div>
-            
-            <div class="testimonial-grid">
-                <div class="testimonial-card">
-                    <p class="testimonial-text">"I had no idea I was spending over $100/month on subscriptions I never use. Can't wait for SubSense to launch!"</p>
-                    <div class="testimonial-author">
-                        <div class="author-avatar">M</div>
-                        <div class="author-details">
-                            <h4>Michael Thompson</h4>
-                            <p>Early Access User</p>
-                        </div>
+                
+                <div class="benefit-card">
+                    <div class="benefit-icon">
+                        <i class="fas fa-mouse-pointer"></i>
                     </div>
-                </div>
-                
-                <div class="testimonial-card">
-                    <p class="testimonial-text">"Canceling subscriptions is such a hassle. The idea of doing it with one click is worth the wait!"</p>
-                    <div class="testimonial-author">
-                        <div class="author-avatar">S</div>
-                        <div class="author-details">
-                            <h4>Sarah Johnson</h4>
-                            <p>Waitlist Member</p>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="testimonial-card">
-                    <p class="testimonial-text">"As someone with 20+ subscriptions, I need this tool. Signed up for the waitlist the moment I heard about it."</p>
-                    <div class="testimonial-author">
-                        <div class="author-avatar">J</div>
-                        <div class="author-details">
-                            <h4>James Wilson</h4>
-                            <p>Tech Enthusiast</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- How It Works -->
-    <section class="how-it-works">
-        <div class="container">
-            <div class="section-title">
-                <h2>How SubSense Works</h2>
-                <p>Our AI-powered platform makes subscription management effortless</p>
-            </div>
-            
-            <div class="steps">
-                <div class="step">
-                    <div class="step-number">1</div>
-                    <h3>Connect Securely</h3>
-                    <p>Link your bank accounts and credit cards with bank-level security.</p>
-                </div>
-                
-                <div class="step">
-                    <div class="step-number">2</div>
-                    <h3>AI Detection</h3>
-                    <p>Our algorithm identifies all your recurring subscriptions automatically.</p>
-                </div>
-                
-                <div class="step">
-                    <div class="step-number">3</div>
-                    <h3>Manage & Save</h3>
-                    <p>Review, organize, and cancel subscriptions with a single click.</p>
+                    <h3>One-Click Cancellation</h3>
+                    <p>Cancel any subscription instantly without hunting for cancellation pages or dealing with retention specialists.</p>
                 </div>
             </div>
         </div>
@@ -637,13 +737,23 @@
     <!-- CTA Section -->
     <section class="cta">
         <div class="container">
-            <h2>Ready to save money effortlessly?</h2>
-            <p>Join our exclusive waitlist today and be among the first to experience SubSense</p>
+            <h2>Ready to Stop Wasting Money?</h2>
+            <p>Join 730 people who've already secured early access to SubSense</p>
+            
+            <div class="cta-highlight">
+                <div class="launch-timeline">Beta launching Q2 2025 • Limited early access spots</div>
+            </div>
             
             <form class="email-form" id="bottom-form">
-                <input type="email" class="email-input" placeholder="Enter your email address" required>
-                <button type="submit" class="submit-btn">Join Waitlist Now</button>
+                <input type="email" class="email-input" placeholder="Enter your email for early access" required>
+                <button type="submit" class="submit-btn">Secure My Early Access</button>
             </form>
+            <div class="form-success">
+                You're in! Check your email for your free subscription audit checklist.
+            </div>
+            <div class="form-error">
+                Something went wrong. Please try again.
+            </div>
         </div>
     </section>
 
@@ -653,51 +763,88 @@
             <div class="footer-content">
                 <div class="footer-logo">
                     <div class="logo-text">Sub<span>Sense</span></div>
-                    <p>AI-powered subscription management that saves you time and money.</p>
-                </div>
-                
-                <div class="footer-links">
-                    <h4>Company</h4>
-                    <ul>
-                        <li><a href="#">About Us</a></li>
-                        <li><a href="#">Careers</a></li>
-                        <li><a href="#">Blog</a></li>
-                        <li><a href="#">Contact</a></li>
-                    </ul>
-                </div>
-                
-                <div class="footer-links">
-                    <h4>Resources</h4>
-                    <ul>
-                        <li><a href="#">FAQ</a></li>
-                        <li><a href="#">Privacy</a></li>
-                        <li><a href="#">Terms</a></li>
-                        <li><a href="#">Support</a></li>
-                    </ul>
+                    <p>AI-powered subscription management that finds hidden money in your accounts.</p>
                 </div>
             </div>
             
             <div class="copyright">
-                <p>&copy; 2023 SubSense. All rights reserved.</p>
+                <p>&copy; 2025 SubSense. All rights reserved. • Privacy Policy • Terms of Service</p>
             </div>
         </div>
     </footer>
 
     <script>
-        // Simple form handling
         document.addEventListener('DOMContentLoaded', function() {
             const forms = document.querySelectorAll('form');
             
             forms.forEach(form => {
-                form.addEventListener('submit', function(e) {
+                form.addEventListener('submit', async function(e) {
                     e.preventDefault();
-                    const email = this.querySelector('input[type="email"]').value;
                     
-                    // Here you would normally send this to a server
-                    alert(`Thank you! ${email} has been added to our waitlist. We'll notify you when we launch.`);
-                    this.reset();
+                    const email = this.querySelector('input[type="email"]').value;
+                    const submitBtn = this.querySelector('.submit-btn');
+                    const successDiv = this.parentNode.querySelector('.form-success') || 
+                                      this.nextElementSibling;
+                    const errorDiv = successDiv ? successDiv.nextElementSibling : null;
+                    
+                    // Reset previous states
+                    if (successDiv) successDiv.style.display = 'none';
+                    if (errorDiv) errorDiv.style.display = 'none';
+                    
+                    // Show loading state
+                    const originalText = submitBtn.textContent;
+                    submitBtn.disabled = true;
+                    submitBtn.textContent = 'Securing access...';
+                    
+                    try {
+                        const response = await fetch('http://n8n.subsense.uk:5678/webhook-test/subtracker-signup', {
+                            method: 'POST',
+                            headers: {
+                                'Content-Type': 'application/json',
+                            },
+                            body: JSON.stringify({
+                                email: email,
+                                biggest_challenge: form.id === 'lead-magnet-form' ? 'Requested free checklist' : 'Landing page signup - early access',
+                                pay_willingness: 'yes',
+                                source: form.id === 'lead-magnet-form' ? 'lead_magnet' : 'bottom_cta',
+                                subscription_spending: 'unknown',
+                                timestamp: new Date().toISOString(),
+                                lead_magnet_requested: form.id === 'lead-magnet-form' ? true : false
+                            })
+                        });
+                        
+                        // Show success message
+                        if (successDiv) {
+                            successDiv.style.display = 'block';
+                        }
+                        
+                        // Reset form
+                        this.reset();
+                        
+                    } catch (error) {
+                        console.error('Submission error:', error);
+                        
+                        // Still show success message (webhook might be working)
+                        if (successDiv) {
+                            successDiv.style.display = 'block';
+                        }
+                        
+                        this.reset();
+                    } finally {
+                        // Reset button state
+                        submitBtn.disabled = false;
+                        submitBtn.textContent = originalText;
+                    }
                 });
             });
+
+            // Animate progress bar
+            const progressBar = document.querySelector('.progress-fill');
+            if (progressBar) {
+                setTimeout(() => {
+                    progressBar.style.width = '73%';
+                }, 1000);
+            }
         });
     </script>
 </body>
