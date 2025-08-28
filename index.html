@@ -7,8 +7,8 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
         :root {
-            --primary: #2A4B7C; /* dark blue from your logo */
-            --accent: #FF6B4A; /* orange/red from your logo */
+            --primary: #2A4B7C;
+            --accent: #FF6B4A;
             --light: #F5F7FA;
             --dark: #1A2B4D;
             --text: #333333;
@@ -48,7 +48,7 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
-            padding: 20px 0;
+            padding: 15px 0;
         }
         
         .logo {
@@ -80,9 +80,9 @@
             color: var(--accent);
         }
         
-        /* Hero Section */
+        /* Hero Section - ZMIANY: padding zmniejszony u góry */
         .hero {
-            padding: 160px 0 100px;
+            padding: 130px 0 80px; /* ZMIENIONE: zmniejszony padding u góry i dołu */
             background: linear-gradient(135deg, rgba(42,75,124,0.05) 0%, rgba(255,107,74,0.05) 100%);
             text-align: center;
         }
@@ -94,30 +94,30 @@
             border-radius: 30px;
             font-size: 14px;
             font-weight: 600;
-            margin-bottom: 20px;
+            margin-bottom: 15px; /* ZMIENIONE: zmniejszony margines */
             display: inline-block;
         }
         
         .hero h1 {
-            font-size: 3.5rem;
-            margin-bottom: 20px;
+            font-size: 3.2rem; /* ZMIENIONE: nieco mniejszy rozmiar */
+            margin-bottom: 15px; /* ZMIENIONE: zmniejszony margines */
             color: var(--dark);
             line-height: 1.2;
         }
         
         .hero p {
-            font-size: 1.25rem;
+            font-size: 1.2rem; /* ZMIENIONE: nieco mniejszy rozmiar */
             color: var(--text-light);
             max-width: 700px;
-            margin: 0 auto 40px;
+            margin: 0 auto 30px; /* ZMIENIONE: zmniejszony margines */
         }
         
-        /* Stats */
+        /* Stats - ZMIANY: zmniejszone odstępy */
         .stats {
             display: flex;
             justify-content: center;
-            gap: 40px;
-            margin: 50px 0;
+            gap: 30px; /* ZMIENIONE: zmniejszony odstęp między statystykami */
+            margin: 35px 0; /* ZMIENIONE: zmniejszony margines */
             flex-wrap: wrap;
         }
         
@@ -126,14 +126,14 @@
         }
         
         .stat-number {
-            font-size: 2.5rem;
+            font-size: 2.3rem; /* ZMIENIONE: nieco mniejszy rozmiar */
             font-weight: 700;
             color: var(--accent);
             margin-bottom: 5px;
         }
         
         .stat-label {
-            font-size: 1rem;
+            font-size: 0.95rem; /* ZMIENIONE: nieco mniejszy rozmiar */
             color: var(--text-light);
         }
         
@@ -180,26 +180,26 @@
         }
         
         .form-note {
-            margin-top: 15px;
+            margin-top: 12px; /* ZMIENIONE: zmniejszony margines */
             font-size: 14px;
             color: var(--text-light);
         }
         
         /* Benefits Section */
         .benefits {
-            padding: 100px 0;
+            padding: 80px 0; /* ZMIENIONE: zmniejszony padding */
             background-color: white;
         }
         
         .section-title {
             text-align: center;
-            margin-bottom: 60px;
+            margin-bottom: 50px; /* ZMIENIONE: zmniejszony margines */
         }
         
         .section-title h2 {
-            font-size: 2.5rem;
+            font-size: 2.3rem; /* ZMIENIONE: nieco mniejszy rozmiar */
             color: var(--dark);
-            margin-bottom: 20px;
+            margin-bottom: 15px; /* ZMIENIONE: zmniejszony margines */
         }
         
         .section-title p {
@@ -212,13 +212,13 @@
         .benefits-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 30px;
+            gap: 25px; /* ZMIENIONE: zmniejszony odstęp */
         }
         
         .benefit-card {
             background-color: var(--light);
             border-radius: 12px;
-            padding: 30px;
+            padding: 25px; /* ZMIENIONE: zmniejszony padding */
             text-align: center;
             transition: all 0.3s;
         }
@@ -229,51 +229,52 @@
         }
         
         .benefit-icon {
-            width: 70px;
-            height: 70px;
+            width: 60px; /* ZMIENIONE: zmniejszony rozmiar */
+            height: 60px; /* ZMIENIONE: zmniejszony rozmiar */
             background: linear-gradient(135deg, var(--primary), var(--dark));
             border-radius: 50%;
             display: flex;
             align-items: center;
             justify-content: center;
-            margin: 0 auto 20px;
+            margin: 0 auto 15px; /* ZMIENIONE: zmniejszony margines */
             color: white;
-            font-size: 28px;
+            font-size: 24px; /* ZMIENIONE: zmniejszony rozmiar */
         }
         
         .benefit-card h3 {
-            font-size: 1.5rem;
-            margin-bottom: 15px;
+            font-size: 1.3rem; /* ZMIENIONE: nieco mniejszy rozmiar */
+            margin-bottom: 12px; /* ZMIENIONE: zmniejszony margines */
             color: var(--dark);
         }
         
         .benefit-card p {
             color: var(--text-light);
+            font-size: 0.95rem; /* ZMIENIONE: nieco mniejszy rozmiar */
         }
         
         /* Testimonials */
         .testimonials {
-            padding: 100px 0;
+            padding: 80px 0; /* ZMIENIONE: zmniejszony padding */
             background: linear-gradient(135deg, rgba(42,75,124,0.05) 0%, rgba(255,107,74,0.05) 100%);
         }
         
         .testimonial-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 30px;
-            margin-top: 50px;
+            gap: 25px; /* ZMIENIONE: zmniejszony odstęp */
+            margin-top: 40px; /* ZMIENIONE: zmniejszony margines */
         }
         
         .testimonial-card {
             background-color: white;
             border-radius: 12px;
-            padding: 30px;
+            padding: 25px; /* ZMIENIONE: zmniejszony padding */
             box-shadow: 0 5px 15px rgba(0,0,0,0.05);
         }
         
         .testimonial-text {
             font-style: italic;
-            margin-bottom: 20px;
+            margin-bottom: 15px; /* ZMIENIONE: zmniejszony margines */
             color: var(--text);
         }
         
@@ -283,14 +284,14 @@
         }
         
         .author-avatar {
-            width: 50px;
-            height: 50px;
+            width: 45px; /* ZMIENIONE: zmniejszony rozmiar */
+            height: 45px; /* ZMIENIONE: zmniejszony rozmiar */
             border-radius: 50%;
             background-color: var(--light);
             display: flex;
             align-items: center;
             justify-content: center;
-            margin-right: 15px;
+            margin-right: 12px; /* ZMIENIONE: zmniejszony margines */
             color: var(--primary);
             font-weight: bold;
         }
@@ -302,12 +303,12 @@
         
         .author-details p {
             color: var(--text-light);
-            font-size: 14px;
+            font-size: 13px; /* ZMIENIONE: zmniejszony rozmiar */
         }
         
         /* How It Works */
         .how-it-works {
-            padding: 100px 0;
+            padding: 80px 0; /* ZMIENIONE: zmniejszony padding */
             background-color: white;
         }
         
@@ -315,8 +316,8 @@
             display: flex;
             flex-wrap: wrap;
             justify-content: center;
-            gap: 30px;
-            margin-top: 50px;
+            gap: 25px; /* ZMIENIONE: zmniejszony odstęp */
+            margin-top: 40px; /* ZMIENIONE: zmniejszony margines */
         }
         
         .step {
@@ -324,46 +325,46 @@
             min-width: 250px;
             max-width: 350px;
             text-align: center;
-            padding: 30px;
+            padding: 25px; /* ZMIENIONE: zmniejszony padding */
         }
         
         .step-number {
-            width: 50px;
-            height: 50px;
+            width: 45px; /* ZMIENIONE: zmniejszony rozmiar */
+            height: 45px; /* ZMIENIONE: zmniejszony rozmiar */
             background-color: var(--accent);
             color: white;
             border-radius: 50%;
             display: flex;
             align-items: center;
             justify-content: center;
-            font-size: 24px;
+            font-size: 20px; /* ZMIENIONE: zmniejszony rozmiar */
             font-weight: bold;
-            margin: 0 auto 20px;
+            margin: 0 auto 15px; /* ZMIENIONE: zmniejszony margines */
         }
         
         .step h3 {
-            font-size: 1.5rem;
-            margin-bottom: 15px;
+            font-size: 1.3rem; /* ZMIENIONE: nieco mniejszy rozmiar */
+            margin-bottom: 12px; /* ZMIENIONE: zmniejszony margines */
             color: var(--dark);
         }
         
         /* CTA Section */
         .cta {
-            padding: 100px 0;
+            padding: 80px 0; /* ZMIENIONE: zmniejszony padding */
             background-color: var(--primary);
             color: white;
             text-align: center;
         }
         
         .cta h2 {
-            font-size: 2.5rem;
-            margin-bottom: 20px;
+            font-size: 2.3rem; /* ZMIENIONE: nieco mniejszy rozmiar */
+            margin-bottom: 15px; /* ZMIENIONE: zmniejszony margines */
         }
         
         .cta p {
-            font-size: 1.2rem;
+            font-size: 1.1rem; /* ZMIENIONE: nieco mniejszy rozmiar */
             max-width: 700px;
-            margin: 0 auto 40px;
+            margin: 0 auto 30px; /* ZMIENIONE: zmniejszony margines */
             opacity: 0.9;
         }
         
@@ -375,15 +376,15 @@
         footer {
             background-color: var(--dark);
             color: white;
-            padding: 60px 0 30px;
+            padding: 50px 0 25px; /* ZMIENIONE: zmniejszony padding */
         }
         
         .footer-content {
             display: flex;
             flex-wrap: wrap;
             justify-content: space-between;
-            gap: 40px;
-            margin-bottom: 40px;
+            gap: 30px; /* ZMIENIONE: zmniejszony odstęp */
+            margin-bottom: 30px; /* ZMIENIONE: zmniejszony margines */
         }
         
         .footer-logo {
@@ -393,12 +394,13 @@
         
         .footer-logo .logo-text {
             color: white;
-            margin-bottom: 20px;
+            margin-bottom: 15px; /* ZMIENIONE: zmniejszony margines */
         }
         
         .footer-logo p {
             opacity: 0.7;
             max-width: 300px;
+            font-size: 0.95rem; /* ZMIENIONE: nieco mniejszy rozmiar */
         }
         
         .footer-links {
@@ -407,8 +409,8 @@
         }
         
         .footer-links h4 {
-            margin-bottom: 20px;
-            font-size: 18px;
+            margin-bottom: 15px; /* ZMIENIONE: zmniejszony margines */
+            font-size: 17px; /* ZMIENIONE: zmniejszony rozmiar */
         }
         
         .footer-links ul {
@@ -416,7 +418,7 @@
         }
         
         .footer-links li {
-            margin-bottom: 10px;
+            margin-bottom: 8px; /* ZMIENIONE: zmniejszony margines */
         }
         
         .footer-links a {
@@ -424,6 +426,7 @@
             opacity: 0.7;
             text-decoration: none;
             transition: all 0.3s;
+            font-size: 0.9rem; /* ZMIENIONE: zmniejszony rozmiar */
         }
         
         .footer-links a:hover {
@@ -432,16 +435,29 @@
         
         .copyright {
             text-align: center;
-            padding-top: 30px;
+            padding-top: 25px; /* ZMIENIONE: zmniejszony padding */
             border-top: 1px solid rgba(255,255,255,0.1);
             opacity: 0.7;
-            font-size: 14px;
+            font-size: 13px; /* ZMIENIONE: zmniejszony rozmiar */
         }
         
         /* Responsive */
         @media (max-width: 768px) {
+            .hero {
+                padding: 110px 0 60px; /* ZMIENIONE: zmniejszony padding na mobile */
+            }
+            
             .hero h1 {
-                font-size: 2.5rem;
+                font-size: 2.2rem; /* ZMIENIONE: zmniejszony rozmiar na mobile */
+            }
+            
+            .stats {
+                gap: 20px; /* ZMIENIONE: zmniejszony odstęp na mobile */
+                margin: 25px 0; /* ZMIENIONE: zmniejszony margines na mobile */
+            }
+            
+            .stat-number {
+                font-size: 1.8rem; /* ZMIENIONE: zmniejszony rozmiar na mobile */
             }
             
             .email-form {
@@ -454,14 +470,6 @@
             
             .submit-btn {
                 width: 100%;
-            }
-            
-            .stats {
-                gap: 20px;
-            }
-            
-            .stat-number {
-                font-size: 2rem;
             }
         }
     </style>
@@ -480,9 +488,9 @@
     <!-- Hero Section -->
     <section class="hero">
         <div class="container">
-            <span class="hero-badge"> All in minutes, not HOURS</span>
+            <span class="hero-badge">All in minutes, not HOURS</span>
             <h1>Take Full Control of Your Money</h1>
-            <p>See all your subscriptions, bills, and recurring charges in one smart dashboard SubSence Be the first to know when we launch!</p>
+            <p>See all your subscriptions, bills, and recurring charges in one smart dashboard. Be the first to know when we launch!</p>
             
             <div class="stats">
                 <div class="stat-item">
@@ -694,6 +702,3 @@
     </script>
 </body>
 </html>
-
-
-
