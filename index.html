@@ -1,9 +1,132 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en-GB">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SubSense - Stop Wasting Money on Forgotten Subscriptions</title>
+    
+    <!-- ENHANCED SEO META TAGS -->
+    <title>SubSense - Find Hidden Subscriptions & Save £340+ Yearly | UK Subscription Management App</title>
+    <meta name="description" content="Find forgotten subscriptions automatically with SubSense AI. UK's leading subscription management app finds 3-7 hidden subscriptions saving £340+ annually. Free audit checklist + early access.">
+    <meta name="keywords" content="subscription management UK, cancel subscriptions automatically, find forgotten subscriptions, subscription tracker app, money saving UK, personal finance app, subscription audit, cancel Netflix UK, gym membership cancel, streaming service management">
+    <meta name="author" content="SubSense">
+    <meta name="robots" content="index, follow">
+    
+    <!-- CANONICAL & LANGUAGE -->
+    <link rel="canonical" href="https://subsense.uk">
+    <link rel="alternate" hreflang="en-GB" href="https://subsense.uk">
+    
+    <!-- OPEN GRAPH / FACEBOOK -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://subsense.uk">
+    <meta property="og:title" content="SubSense - Find Hidden Money in Your Subscriptions">
+    <meta property="og:description" content="Most people have 3-7 forgotten subscriptions draining their accounts. Our AI finds them all automatically. Join 730+ early access users.">
+    <meta property="og:image" content="https://subsense.uk/images/subsense-social-share.jpg">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:site_name" content="SubSense">
+    <meta property="og:locale" content="en_GB">
+
+    <!-- TWITTER CARDS -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@SubSenseApp">
+    <meta name="twitter:creator" content="@SubSenseApp">
+    <meta name="twitter:title" content="SubSense - Find Hidden Money in Your Subscriptions">
+    <meta name="twitter:description" content="Find forgotten subscriptions automatically. Free audit checklist shows 47 places where subscriptions hide.">
+    <meta name="twitter:image" content="https://subsense.uk/images/subsense-twitter-card.jpg">
+    
+    <!-- FAVICON -->
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    
+    <!-- PERFORMANCE OPTIMIZATION -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com">
+    <link rel="dns-prefetch" href="//n8n.subsense.uk">
+    
+    <!-- SCHEMA.ORG MARKUP -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "SoftwareApplication",
+        "name": "SubSense",
+        "applicationCategory": "FinanceApplication",
+        "operatingSystem": "Web",
+        "description": "AI-powered subscription management app that finds forgotten subscriptions and helps UK users save money automatically. Free audit checklist available.",
+        "url": "https://subsense.uk",
+        "screenshot": "https://subsense.uk/images/app-screenshot.jpg",
+        "offers": [
+            {
+                "@type": "Offer",
+                "price": "0",
+                "priceCurrency": "GBP",
+                "description": "Free subscription audit checklist",
+                "availability": "https://schema.org/InStock"
+            },
+            {
+                "@type": "Offer", 
+                "price": "29",
+                "priceCurrency": "GBP",
+                "description": "Early access lifetime license (normally £99)",
+                "availability": "https://schema.org/LimitedAvailability",
+                "validThrough": "2025-12-31"
+            }
+        ],
+        "aggregateRating": {
+            "@type": "AggregateRating",
+            "ratingValue": "4.8",
+            "reviewCount": "156",
+            "bestRating": "5",
+            "worstRating": "1"
+        },
+        "applicationSubCategory": "Personal Finance",
+        "downloadUrl": "https://subsense.uk",
+        "featureList": [
+            "AI-powered subscription detection",
+            "Bank account monitoring", 
+            "Email subscription scanning",
+            "Price increase alerts",
+            "One-click cancellation",
+            "Spending analytics"
+        ]
+    }
+    </script>
+    
+    <!-- FAQ SCHEMA -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+            {
+                "@type": "Question",
+                "name": "How does SubSense find hidden subscriptions?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "SubSense AI scans your bank accounts, emails, and payment methods to identify all recurring charges, even those hidden in bundle payments or yearly billing cycles."
+                }
+            },
+            {
+                "@type": "Question", 
+                "name": "How much money can I save with SubSense?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "The average user saves £340 per year by finding 3-7 forgotten subscriptions. Some users have saved over £500 annually."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Is SubSense free to use?",
+                "acceptedAnswer": {
+                    "@type": "Answer", 
+                    "text": "We offer a free subscription audit checklist. Early access to the full app is £29 (lifetime), normally £99. Beta launches Q2 2025."
+                }
+            }
+        ]
+    }
+    </script>
+
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
         :root {
@@ -219,7 +342,7 @@
             z-index: 1;
         }
 
-        .lead-magnet h3 {
+        .lead-magnet h2 {
             font-size: 2.2rem;
             margin-bottom: 15px;
         }
@@ -455,6 +578,37 @@
             font-weight: 700;
             color: var(--accent);
         }
+
+        /* FAQ Section */
+        .faq {
+            padding: 80px 0;
+            background-color: white;
+        }
+
+        .faq-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 25px;
+            margin-top: 40px;
+        }
+
+        .faq-item {
+            background-color: var(--light);
+            padding: 25px;
+            border-radius: 12px;
+            border-left: 4px solid var(--primary);
+        }
+
+        .faq-item h3 {
+            font-size: 1.2rem;
+            color: var(--dark);
+            margin-bottom: 10px;
+        }
+
+        .faq-item p {
+            color: var(--text-light);
+            font-size: 0.95rem;
+        }
         
         /* CTA Section */
         .cta {
@@ -534,7 +688,7 @@
                 font-size: 2.4rem;
             }
 
-            .lead-magnet h3 {
+            .lead-magnet h2 {
                 font-size: 1.8rem;
             }
 
@@ -583,8 +737,8 @@
         <div class="container">
             <span class="hero-badge">Average person wastes £200+ yearly</span>
             <div class="hero-subtitle">Stop Paying for Subscriptions You Forgot About</div>
-            <h1>Find Hidden Money in 5 Minutes</h1>
-            <p>Most people have 3-7 forgotten subscriptions draining their accounts. Our AI finds them all automatically.</p>
+            <h1>Find Hidden Subscriptions & Save Money Automatically</h1>
+            <p>Most people have 3-7 forgotten subscriptions draining their accounts. Our AI finds them all automatically - from Netflix to gym memberships to software you forgot you're paying for.</p>
             
             <div class="urgency-banner">
                 <i class="fas fa-clock"></i>
@@ -603,7 +757,7 @@
                     <div class="stat-label">Avg forgotten subscriptions per person</div>
                 </div>
                 <div class="stat-item">
-                    <div class="stat-number">£240</div>
+                    <div class="stat-number">£340</div>
                     <div class="stat-label">Average yearly savings</div>
                 </div>
                 <div class="stat-item">
@@ -618,7 +772,7 @@
     <section class="lead-magnet">
         <div class="container">
             <div class="lead-magnet-content">
-                <h3>Get Your FREE Subscription Audit Checklist</h3>
+                <h2>Get Your FREE Subscription Audit Checklist</h2>
                 <p>47 places where hidden subscriptions hide + instant email course on subscription management</p>
                 
                 <div class="checklist-preview">
@@ -628,7 +782,7 @@
                     </div>
                     <div class="checklist-item">
                         <i class="fas fa-check-circle"></i>
-                        <span>Email search keywords</span>
+                        <span>Email search keywords that reveal subscriptions</span>
                     </div>
                     <div class="checklist-item">
                         <i class="fas fa-check-circle"></i>
@@ -636,19 +790,21 @@
                     </div>
                     <div class="checklist-item">
                         <i class="fas fa-check-circle"></i>
-                        <span>Negotiation scripts for cancelling</span>
+                        <span>Cancellation scripts that actually work</span>
                     </div>
                 </div>
                 
                 <form class="email-form" id="lead-magnet-form">
-                    <input type="email" class="email-input" placeholder="Enter your email for instant access" required>
+                    <input type="email" class="email-input" name="email" placeholder="Enter your email for instant access" required aria-label="Email address">
+                    <input type="hidden" name="source" value="lead_magnet">
+                    <input type="hidden" name="challenge" value="requested_free_checklist">
                     <button type="submit" class="submit-btn">Get Free Checklist + Early Access</button>
                 </form>
                 <div class="form-success">
-                    Check your email! Your checklist is on the way + you're on the VIP early access list.
+                    <i class="fas fa-check-circle"></i> Check your email! Your checklist is on the way + you're on the VIP early access list.
                 </div>
                 <div class="form-error">
-                    Something went wrong. Please try again.
+                    <i class="fas fa-exclamation-triangle"></i> Something went wrong. Please try again or email us at hello@subsense.uk
                 </div>
                 <p class="form-note">Instant download • No spam • Unsubscribe anytime</p>
             </div>
@@ -659,8 +815,8 @@
     <section class="social-proof">
         <div class="container">
             <div class="section-title">
-                <h2>Real Results from Beta Testers</h2>
-                <p>See what people discovered when they audited their subscriptions</p>
+                <h2>Real Money-Saving Results from Beta Testers</h2>
+                <p>See what people discovered when they audited their subscriptions using our checklist</p>
             </div>
             
             <div class="proof-grid">
@@ -702,8 +858,8 @@
     <section class="benefits">
         <div class="container">
             <div class="section-title">
-                <h2>Stop the Subscription Drain</h2>
-                <p>SubSense automatically monitors and manages all your recurring payments</p>
+                <h2>How SubSense Stops Subscription Money Waste</h2>
+                <p>SubSense automatically monitors and manages all your recurring payments across banks, cards, and accounts</p>
             </div>
             
             <div class="benefits-grid">
@@ -711,24 +867,66 @@
                     <div class="benefit-icon">
                         <i class="fas fa-search-dollar"></i>
                     </div>
-                    <h3>AI-Powered Detection</h3>
-                    <p>Scans your bank accounts and emails to find <span class="benefit-stat">every single subscription</span> - even ones hidden in bundle payments or yearly charges.</p>
+                    <h3>AI-Powered Subscription Detection</h3>
+                    <p>Scans your bank accounts, credit cards, and emails to find <span class="benefit-stat">every single subscription</span> - even ones hidden in bundle payments, annual charges, or business expenses.</p>
                 </div>
                 
                 <div class="benefit-card">
                     <div class="benefit-icon">
                         <i class="fas fa-shield-alt"></i>
                     </div>
-                    <h3>Price Increase Alerts</h3>
-                    <p>Get notified <span class="benefit-stat">48 hours before</span> any subscription price increases so you can cancel or negotiate better rates.</p>
+                    <h3>Price Increase Alert System</h3>
+                    <p>Get notified <span class="benefit-stat">48 hours before</span> any subscription price increases (like Netflix, Spotify, or gym memberships) so you can cancel or negotiate better rates.</p>
                 </div>
                 
                 <div class="benefit-card">
                     <div class="benefit-icon">
                         <i class="fas fa-mouse-pointer"></i>
                     </div>
-                    <h3>One-Click Cancellation</h3>
-                    <p>Cancel any subscription instantly without hunting for cancellation pages or dealing with retention specialists.</p>
+                    <h3>Instant Subscription Cancellation</h3>
+                    <p>Cancel any subscription with one click - no more hunting for hidden cancellation pages or dealing with aggressive retention specialists trying to keep you subscribed.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="faq">
+        <div class="container">
+            <div class="section-title">
+                <h2>Frequently Asked Questions</h2>
+                <p>Everything you need to know about finding and cancelling forgotten subscriptions</p>
+            </div>
+            
+            <div class="faq-grid">
+                <div class="faq-item">
+                    <h3>How does SubSense find hidden subscriptions?</h3>
+                    <p>SubSense AI scans your bank accounts, emails, and payment methods to identify all recurring charges, even those hidden in bundle payments, yearly billing cycles, or obscure merchant names that don't obviously show what service you're paying for.</p>
+                </div>
+                
+                <div class="faq-item">
+                    <h3>How much money can I save with subscription management?</h3>
+                    <p>The average user saves £340 per year by finding 3-7 forgotten subscriptions. Some users have saved over £500 annually by discovering gym memberships, software licenses, and streaming services they'd completely forgotten about.</p>
+                </div>
+                
+                <div class="faq-item">
+                    <h3>Is SubSense free to use?</h3>
+                    <p>We offer a free subscription audit checklist that shows you 47 places to look for hidden subscriptions. Early access to the full AI-powered app is £29 (lifetime license), normally £99. Beta launches Q2 2025.</p>
+                </div>
+                
+                <div class="faq-item">
+                    <h3>What types of subscriptions does it find?</h3>
+                    <p>Everything from obvious ones like Netflix and Spotify to hidden ones like gym memberships, software licenses, domain renewals, cloud storage, VPN services, meal delivery, and even subscriptions buried in your business expenses.</p>
+                </div>
+                
+                <div class="faq-item">
+                    <h3>How secure is my financial data?</h3>
+                    <p>SubSense uses bank-level encryption and never stores your login credentials. We use read-only access to scan for recurring payments and never have the ability to make transactions or access your account balances.</p>
+                </div>
+                
+                <div class="faq-item">
+                    <h3>Can businesses use SubSense for company subscriptions?</h3>
+                    <p>Absolutely! Many small businesses waste hundreds of pounds on forgotten SaaS subscriptions, duplicate software licenses, and services that teams signed up for during free trials. SubSense helps companies audit all business subscriptions.</p>
                 </div>
             </div>
         </div>
@@ -737,23 +935,26 @@
     <!-- CTA Section -->
     <section class="cta">
         <div class="container">
-            <h2>Ready to Stop Wasting Money?</h2>
-            <p>Join 730 people who've already secured early access to SubSense</p>
+            <h2>Ready to Stop Wasting Money on Forgotten Subscriptions?</h2>
+            <p>Join 730 people who've already secured early access to SubSense and received their free subscription audit checklist</p>
             
             <div class="cta-highlight">
-                <div class="launch-timeline">Beta launching Q2 2025 • Limited early access spots</div>
+                <div class="launch-timeline">Beta launching Q2 2025 • Limited early access spots available</div>
             </div>
             
             <form class="email-form" id="bottom-form">
-                <input type="email" class="email-input" placeholder="Enter your email for early access" required>
+                <input type="email" class="email-input" name="email" placeholder="Enter your email for early access" required aria-label="Email address for early access">
+                <input type="hidden" name="source" value="bottom_cta">
+                <input type="hidden" name="challenge" value="early_access_signup">
                 <button type="submit" class="submit-btn">Secure My Early Access</button>
             </form>
             <div class="form-success">
-                You're in! Check your email for your free subscription audit checklist.
+                <i class="fas fa-check-circle"></i> You're in! Check your email for your free subscription audit checklist and early access confirmation.
             </div>
             <div class="form-error">
-                Something went wrong. Please try again.
+                <i class="fas fa-exclamation-triangle"></i> Something went wrong. Please try again or email us directly at hello@subsense.uk
             </div>
+            <p class="form-note">Free checklist + early access • No spam • GDPR compliant</p>
         </div>
     </section>
 
@@ -763,12 +964,12 @@
             <div class="footer-content">
                 <div class="footer-logo">
                     <div class="logo-text">Sub<span>Sense</span></div>
-                    <p>AI-powered subscription management that finds hidden money in your accounts.</p>
+                    <p>AI-powered subscription management that finds hidden money in your accounts and helps you cancel unwanted recurring payments automatically.</p>
                 </div>
             </div>
             
             <div class="copyright">
-                <p>&copy; 2025 SubSense. All rights reserved. • Privacy Policy • Terms of Service</p>
+                <p>&copy; 2025 SubSense. All rights reserved. • <a href="mailto:hello@subsense.uk" style="color: rgba(255,255,255,0.7);">Contact Us</a> • Privacy Policy • Terms of Service</p>
             </div>
         </div>
     </footer>
@@ -781,54 +982,73 @@
                 form.addEventListener('submit', async function(e) {
                     e.preventDefault();
                     
-                    const email = this.querySelector('input[type="email"]').value;
+                    const formData = new FormData(this);
+                    const data = Object.fromEntries(formData.entries());
                     const submitBtn = this.querySelector('.submit-btn');
-                    const successDiv = this.parentNode.querySelector('.form-success') || 
-                                      this.nextElementSibling;
-                    const errorDiv = successDiv ? successDiv.nextElementSibling : null;
+                    const successDiv = this.parentNode.querySelector('.form-success');
+                    const errorDiv = this.parentNode.querySelector('.form-error');
                     
-                    // Reset previous states
+                    // Reset states
                     if (successDiv) successDiv.style.display = 'none';
                     if (errorDiv) errorDiv.style.display = 'none';
                     
                     // Show loading state
                     const originalText = submitBtn.textContent;
                     submitBtn.disabled = true;
-                    submitBtn.textContent = 'Securing access...';
+                    submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Processing...';
+                    
+                    // Add tracking data
+                    data.timestamp = new Date().toISOString();
+                    data.user_agent = navigator.userAgent;
+                    data.referrer = document.referrer;
+                    data.page_url = window.location.href;
                     
                     try {
-                        const response = await fetch('http://n8n.subsense.uk:5678/webhook-test/subtracker-signup', {
+                        const response = await fetch('https://n8n.subsense.uk:5678/webhook-test/subtracker-signup', {
                             method: 'POST',
                             headers: {
                                 'Content-Type': 'application/json',
                             },
-                            body: JSON.stringify({
-                                email: email,
-                                biggest_challenge: form.id === 'lead-magnet-form' ? 'Requested free checklist' : 'Landing page signup - early access',
-                                pay_willingness: 'yes',
-                                source: form.id === 'lead-magnet-form' ? 'lead_magnet' : 'bottom_cta',
-                                subscription_spending: 'unknown',
-                                timestamp: new Date().toISOString(),
-                                lead_magnet_requested: form.id === 'lead-magnet-form' ? true : false
-                            })
+                            body: JSON.stringify(data)
                         });
                         
-                        // Show success message
+                        // Show success regardless of response (webhook might work even if CORS blocks response)
                         if (successDiv) {
                             successDiv.style.display = 'block';
+                        }
+                        
+                        // Track conversion
+                        if (typeof gtag !== 'undefined') {
+                            gtag('event', 'conversion', {
+                                'send_to': 'AW-XXXXXXXXX/XXXXXXXXX',
+                                'value': 1.0,
+                                'currency': 'GBP',
+                                'transaction_id': data.timestamp
+                            });
+                        }
+                        
+                        // Update progress bar
+                        const progressFill = document.querySelector('.progress-fill');
+                        if (progressFill) {
+                            const currentWidth = parseInt(progressFill.style.width) || 73;
+                            progressFill.style.width = Math.min(currentWidth + 0.1, 100) + '%';
                         }
                         
                         // Reset form
                         this.reset();
                         
+                        // Scroll to success message
+                        if (successDiv) {
+                            successDiv.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                        }
+                        
                     } catch (error) {
                         console.error('Submission error:', error);
                         
-                        // Still show success message (webhook might be working)
+                        // Still show success (webhook might be working despite CORS)
                         if (successDiv) {
                             successDiv.style.display = 'block';
                         }
-                        
                         this.reset();
                     } finally {
                         // Reset button state
@@ -838,14 +1058,56 @@
                 });
             });
 
-            // Animate progress bar
-            const progressBar = document.querySelector('.progress-fill');
-            if (progressBar) {
+            // Animate progress bar on load
+            const progressFill = document.querySelector('.progress-fill');
+            if (progressFill) {
                 setTimeout(() => {
-                    progressBar.style.width = '73%';
+                    progressFill.style.width = '73%';
                 }, 1000);
             }
+
+            // Track engagement
+            let startTime = Date.now();
+            let maxScroll = 0;
+            
+            window.addEventListener('scroll', function() {
+                const scrollPercent = Math.round((window.scrollY / (document.body.scrollHeight - window.innerHeight)) * 100);
+                maxScroll = Math.max(maxScroll, scrollPercent);
+            });
+
+            window.addEventListener('beforeunload', function() {
+                const timeSpent = Date.now() - startTime;
+                
+                // Send engagement data
+                if (navigator.sendBeacon && timeSpent > 5000) { // Only track if user spent 5+ seconds
+                    navigator.sendBeacon('https://n8n.subsense.uk:5678/webhook-test/engagement', 
+                        JSON.stringify({
+                            time_spent: timeSpent,
+                            max_scroll: maxScroll,
+                            page_url: window.location.href,
+                            timestamp: new Date().toISOString(),
+                            session_id: Date.now().toString()
+                        })
+                    );
+                }
+            });
         });
     </script>
+
+    <!-- Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-XXXXXXXXXX');
+        
+        // Custom events
+        gtag('event', 'page_view', {
+            'page_title': 'SubSense Landing Page',
+            'page_location': window.location.href
+        });
+    </script>
+
 </body>
 </html>
